@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html , body, container{
+    height: 100%;
+}
+.container{
+    height: 100%;
+    background-color: rgba( 0, 0, 0, 0 );
+}
+
+.left{
+    width: 30%;
+    height: 100%;
+    color: #e0a80d;
+    background-color: #292A2A;
+    float: left;
+}
+
+.main{
+    width: 70%;
+    height: 100%;
+    color: #979899;
+    background: #2B2B2B;
+    float: left;
+}
