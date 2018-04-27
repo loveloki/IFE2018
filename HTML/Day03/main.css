@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html , body, container{
+    height: 100%;
+}
+.container{
+    height: 100%;
+    background-color: rgba( 0, 0, 0, 0 );
+}
+
+.left{
+    width: 30%;
+    height: 100%;
+    text-align: center;
+    color: #e0a80d;
+    background-color: #292A2A;
+    float: left;
+}
+
+.right{
+    width: 70%;
+    height: 100%;
+    padding: 15px 70px;
+    color: #979899;
+    background: #2B2B2B;
+    float: left;
+}
+
+/* Day03
+下面是添加更新样式
+上面未更改 */
+.row{
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 15px;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    margin: 15px;
+}
+
+h2{
+    margin-bottom: 15px;
+    flex: 0 0 100%;
+}
+
+p{
+    margin-bottom: 7px;
+}
+
+.myitem-4{
+    width: 33.3333%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.myitem-3{
+    width: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
