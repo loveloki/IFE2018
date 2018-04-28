@@ -1,0 +1,58 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 960px;
+    margin: 0 auto;
+}
+.col-4 label, .col-4 span{
+    display: inline-block;
+}
+span{
+    display: block;
+}
+label{
+    font-weight: bold;
+}
+
+/* 
+ *上面是基本样式
+ *下面是布局
+ */
+
+.theme-context{
+    color: #fff;
+    background-color: #858585;
+    padding: 20px;
+}
+[class*="col-"] label, [class*="col-"] span{
+    display: inline-block;
+}
+[class*="col-"]{
+    float: left;
+}
+.col-4, .col-12{
+    margin-top: 16px;
+    margin-right: 32px;
+}
+.col-12{
+    width: 50%;
+}
+.row::before, .row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.col-title{
+    width: 8em;
+    height: 8em;
+    line-height: 8em;
+    text-align: center;
+    background-color: #D6D6D6;
+    margin-right: 16px;
+}
+.row{
+    border-bottom: 2px solid #eee;
+}

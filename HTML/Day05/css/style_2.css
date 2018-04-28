@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 960px;
+    margin: 0 auto;
+}
+h2, span{
+    margin-bottom: 16px;
+}
+
+.row{
+    margin-bottom: 16px;
+}
+.col-4 label, .col-4 span{
+    display: inline-block;
+}
+span{
+    display: block;
+}
+label{
+    font-weight: bold;
+}
+
+/* 
+ *上面是基本样式
+ *下面是布局
+ */
+
+[class*="col-"]{
+    float: left;
+    margin-right: 32px;
+}
+.col-title, .col-12{
+    width: 100%;
+}
+
+
+html, body, .container{
+    height: 100%;
+}
+.theme-context{
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    background-color: #65A5FA;
+    padding-top: 32px;
+}
+.theme-context, .main-context{
+    float: left;
+}
+
+.main-context{
+    width: 80%;
+    padding-top: 32px;
+    padding-left: 16px;
+}
