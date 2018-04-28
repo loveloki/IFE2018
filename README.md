@@ -1,7 +1,7 @@
 # IFE2018
 
 ### HTML
-[Day05](https://loveloki.github.io/IFE2018/HTML/Day05/README.MD)
+[Day05](https://github.com/loveloki/IFE2018/tree/master/HTML/Day05)
 
 [Day04](https://loveloki.github.io/IFE2018/HTML/Day04)
 
