@@ -1,0 +1,91 @@
+/*
+ * @Author: Xleine 
+ * @Date: 2018-04-28 10:29:52 
+ * @Last Modified by: Xleine
+ * @Last Modified time: 2018-04-28 10:30:17
+ */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html , body{
+    height: 100%;
+}
+.container{
+    height: 100%;
+    background-color: rgba( 0, 0, 0, 0 );
+}
+
+.left{
+    width: 30%;
+    height: 100%;
+    text-align: center;
+    color: #e0a80d;
+    background-color: #292A2A;
+    float: left;
+}
+
+.right{
+    width: 70%;
+    height: 100%;
+    padding: 15px 70px;
+    color: #979899;
+    background: #2B2B2B;
+    float: left;
+}
+
+.row{
+    display: flex;
+    flex-flow: row wrap;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.left img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    margin: 15px;
+}
+
+h2{
+    margin-bottom: 15px;
+    flex: 0 0 100%;
+}
+
+p{
+    margin-bottom: 7px;
+}
+
+.row{
+    border-bottom: 2px dashed #404242;
+}
+.row:last-child{
+    border: none;
+}
+
+.myitem-4{
+    width: 33.3333%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.myitem-3{
+    width: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+a{
+    text-decoration: none;
+    color: #979899;
+}
+
+a:hover{
+    color: #eee;
+}
+
+.row:nth-child(2n) p{
+    width: 100%;
+}
