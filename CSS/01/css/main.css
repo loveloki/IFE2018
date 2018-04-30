@@ -1,0 +1,28 @@
+.container{
+    width: 960px;
+    margin: 1.25rem /* 20/16 */ auto;
+    text-align: center;
+}
+.line{
+    width: 0;
+    height: .3125rem /* 5/16 */;
+    background-color: #35f;
+    margin: 0 auto;
+}
+.line-transtion{
+    transition: 0.3s;
+    width: 9rem;
+}
+.back-line-transtion{
+    transition: 0.3s;
+}
+.btn{
+    display: block;
+    width: 6rem;
+    font-size: 24px;
+    text-align: center;
+    padding: 0.25rem 0.5rem;
+    margin: 4rem auto;
+    border: .0625rem /* 1/16 */ solid #aaa;
+    border-radius: .625rem /* 10/16 */;
+}
