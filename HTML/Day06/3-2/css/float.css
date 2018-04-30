@@ -1,0 +1,15 @@
+.left-box, .center-box, .right-box{
+    float: left;
+}
+.left-box{
+    width: 200px;
+    background-color: #525c68;
+}
+.center-box{
+    width: 300px;
+    background-color: #9194b5;
+}
+.right-box{
+    width: calc(100% - 200px - 300px);
+    background-color: #64636b;
+}

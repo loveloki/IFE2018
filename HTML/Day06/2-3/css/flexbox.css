@@ -1,0 +1,11 @@
+.container{
+    display: flex;
+}
+.left-box{
+    flex: 1;
+    background-color: #5e6f66;
+}
+.right-box{
+    width: 200px;
+    background-color: #204042;
+}

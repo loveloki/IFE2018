@@ -1,0 +1,11 @@
+.left-box, .right-box{
+    float: left;
+}
+.left-box{
+    width: 30%;
+    background-color: #525c68;
+}
+.right-box{
+    width: 70%;
+    background-color: #64636b;
+}

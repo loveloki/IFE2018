@@ -1,0 +1,146 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html, body, .container{
+    min-width: 960px;
+}
+.back-list a{
+    display: block;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-decoration: none;
+    text-align: center;
+    color: #eee;
+    background-color: #444;
+    margin: 0 auto;
+}
+.container{
+    border: 5px dashed #f55;
+}
+header{
+    height: 80px;
+    color: #fff;
+    padding-top: 5px;
+    background-color: #333;
+}
+header span{
+    position: relative;
+    top: 10px;
+    font-size: 24px;
+}
+
+header .top-container{
+    position: relative;
+    width: 960px;
+    margin: 0 auto;
+}
+.top-container .top-nav{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.top-container a{
+    color: #fff;
+}
+
+
+.banner{
+    position: relative;
+    height: 150px;
+    background-color: #6B3;
+}
+.banner .banner-nav{
+    position: absolute;
+    left: 70%;
+    bottom: 5px;
+}
+.banner-nav a{
+    display: inline-block;
+    padding: 15px;
+    margin-right: 5px;
+    text-align: center;
+    background-color: #B2DD99;
+    border: 1px solid #000;
+}
+
+.banner .selected{
+    padding-top: 40px;
+    background-color: #fff;
+}
+
+
+.main-nav{
+    height: 80px;
+    border-bottom: 1px solid #888;
+}
+nav{
+    position: relative;
+    top: 30px;
+    width: 960px;
+    height: 50px;
+    margin: 0 auto;
+}
+nav a{
+    display: block;
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin-bottom: 2px;
+    background-color: #eee;
+    border: 1px solid #888;
+    border-radius: 20px 20px 0 0;
+    float: left;
+}
+nav .selected-nav{
+    background-color: #fff;
+    border-bottom: 0 none;
+}
+.main-container{
+    width: 960px;
+    margin: 0 auto;
+}
+.main-container .content{
+    padding: 80px;
+    border: 1px solid #888;
+}
+[class*="row-"]{
+    display: flex;
+    margin-top: 5px;
+}
+.row-1 .content{
+    flex: 3;
+    margin-right: 5px;
+}
+.row-1 .content:last-child{
+    flex: 2;
+}
+[class*="row-"] .content{
+    text-align: center;
+    margin-right: 5px;
+}
+[class*="row-"] .content:last-child{
+    margin-right: 0;
+}
+
+.row-2 .content{
+    flex: 1;
+}
+.row-3 .content{
+    flex: 1;
+}
+
+footer{
+    height: 80px;
+    margin-top: 10px;
+    padding-top: 10px;
+    text-align: center;
+    background-color: #666;
+}
+footer a{
+    text-decoration: none;
+    color: #fff;
+}

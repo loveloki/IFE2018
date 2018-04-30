@@ -1,0 +1,14 @@
+.container{
+    position: relative;
+}
+.left-box{
+    width: 30%;
+    background-color: #D47F94;
+}
+.right-box{
+    position: absolute;
+    width: 70%;
+    top: 0;
+    right: 0;
+    background-color: #E9BABA;
+}

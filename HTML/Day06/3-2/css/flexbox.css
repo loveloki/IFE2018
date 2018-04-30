@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+}
+.left-box{
+    width: 200px;
+    background-color: #5e6f66;
+}
+.center-box{
+    width: 300px;
+    background-color: #9194b5;
+}
+.right-box{
+    flex: 1;
+    background-color: #204042;
+}

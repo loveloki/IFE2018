@@ -1,0 +1,33 @@
+.change-css{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.change-css::after{
+    content: "左侧200px，右侧自适应";
+    display: block;
+}
+.container{
+    min-width: 200px;
+    height: 960px;
+    margin: 0 auto;
+    border: 5px dashed #f55;
+}
+.left-box, .right-box{
+    height: 100%;
+}
+.btn{
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-decoration: none;
+    text-align: center;
+    color: #eee;
+    background-color: #444;
+}
+
+a:hover{
+    cursor: pointer;
+}
+

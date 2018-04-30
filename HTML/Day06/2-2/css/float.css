@@ -1,0 +1,11 @@
+.left-box, .right-box{
+    float: left;
+}
+.left-box{
+    width: 200px;
+    background-color: #525c68;
+}
+.right-box{
+    width: calc(100% - 200px);
+    background-color: #64636b;
+}
