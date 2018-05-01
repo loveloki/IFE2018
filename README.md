@@ -14,4 +14,6 @@
 ## CSS
 [01](https://loveloki.github.io/IFE2018/CSS/01)
 
-### LAST UPDATE 2018.04.30
+[02](https://loveloki.github.io/IFE2018/CSS/02)
+
+### LAST UPDATE 2018.05.01

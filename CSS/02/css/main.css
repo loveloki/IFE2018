@@ -1,0 +1,38 @@
+.container{
+    width: 960px;
+    height: 400px;
+    padding-left: 50px;
+    margin: 0 auto;
+    border: 1px solid #444;
+}
+.container::after{
+    display: block;
+    content: "";
+    clear: both;
+}
+.box{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    margin-top: 60px;
+    margin-right: 50px;
+    background-color: #eee;
+    border: 1px solid #555;
+    float: left;
+}
+.box1{
+    transform: skewX(30deg);
+}
+.box2{
+    transform: scaleX(0.5);
+}
+.box3{
+    transform: rotate(45deg);
+}
+.box4{
+    transform: translate(10px, 20px);
+}
+.box5{
+    transform: skewX(30deg) scaleX(0.5) rotate(45deg) translate(10px, 20px);
+}
