@@ -1,6 +1,8 @@
 # [BAIDU IFE2018](http://ife.baidu.com/)相关CODE
 
 ## HTML
+[Day07](https://loveloki.github.io/IFE2018/HTML/Day07)
+
 [Day06](https://loveloki.github.io/IFE2018/HTML/Day06)
 
 [Day05](https://github.com/loveloki/IFE2018/tree/master/HTML/Day05)
@@ -16,4 +18,4 @@
 
 [02](https://loveloki.github.io/IFE2018/CSS/02)
 
-### LAST UPDATE 2018.05.01
+### LAST UPDATE 2018.05.07
