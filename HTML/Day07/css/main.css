@@ -1,0 +1,403 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 1600px;
+    margin: 0 auto;
+}
+
+/* #region */
+.header{
+    background: url("../images/header.png");
+    padding-top: 200px;
+    padding-bottom: 180px;
+    margin: 0 auto;
+}
+.header > span{
+    display: block;
+    font-size: 62px;
+    font-weight: lighter;
+    color: #fff;
+    text-align: center;
+}
+.header p{
+    width: 39%;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    font-weight: lighter;
+    margin: 100px auto;
+}
+
+.header .sign-form{
+    width: 970px;
+    height: 250px;
+    text-align: center;
+    border: 1px solid #fff; 
+    padding-top: 60px;
+    margin: 0 auto;
+}
+.sign-form span{
+    display: block;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.sign-form input{
+    width: 290px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #fff;
+    margin-top: 40px;
+    margin-right: 30px;
+}
+
+.sign-form span:last-of-type{
+    font-size: 12px;
+}
+
+.sign-form a{
+    display: inline-block;
+    width: 125px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #fff;
+}
+.sign-form a:hover{
+    cursor: pointer;
+}
+
+/* #endregion */
+/* #region */
+.feature{
+    color: #141414;
+    background-color: #fff;
+}
+.feature > span{
+    display: block;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 90px;
+    margin-bottom: 40px;
+}
+
+.feature >p{
+    display: block;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 42px;
+}
+.feature .feature-context{
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 120px;
+}
+.feature-context .feature-list{
+    flex: 0 0 50%;
+    padding-left: 150px;
+}
+.feature-context .feature-list:nth-of-type(2n+1){
+    margin-left: 300px;
+    margin-right: -300px;
+}
+.feature-context .phone::before{
+    position: relative;
+    display: block;
+    content: url(../images/IphoneIcon.png);
+    top: 50px;
+    left: -50px;
+}
+.feature-context .check::before{
+    position: relative;
+    display: block;
+    content: url(../images/CheckIcon.png);
+    top: 50px;
+    left: -50px;
+}
+.feature-context .pencil::before{
+    position: relative;
+    display: block;
+    content: url(../images/PencilIcon.png);
+    top: 50px;
+    left: -65px;
+}
+.feature-context .settings::before{
+    position: relative;
+    display: block;
+    content: url(../images/SettingsIcon.png);
+    top: 50px;
+    left: -60px;
+}
+.feature-list p{
+    width: 55%;
+}
+/* #endregion */
+/* #region */
+.support{
+    height: 800px;
+    color: #fff;
+    background: url(../images/support.png)
+}
+.support .support-text, .support img{
+    float: left;
+}
+.support .support-text{
+    margin-top: 150px;
+    margin-left: 146px;
+}
+.support-text > span{
+    display: block;
+    font-size: 42px;
+    width: 50%;
+}
+.support-text > p{
+    width: 50%;
+    font-size: 18px;
+    margin-top: 40px;
+}
+.support-text a{
+    display: inline-block;
+    width: 240px;
+    height: 50px;
+    line-height: 50px;
+    color: #141414;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 40px;
+    background-color: #fff;
+}
+.support a:last-child{
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #fff;
+}
+.support img{
+    margin-top: 100px;
+    display: block;
+}
+/* #endregion */
+/* #region */
+.products{
+    height: 500px;
+    padding-left: 300px;
+    padding-right: 300px;
+    border-bottom: 1px solid #141414;
+}
+.products span{
+    display: block;
+    font-size: 42px;
+    text-align: center;
+    margin-top: 150px;
+}
+.products .text{
+    width: 33.33%;
+    text-align: center;
+    margin-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    float: left;
+}
+/* #endregion */
+/* #region */
+.improve{
+    padding-left: 300px;
+    padding-right: 300px;
+    border-bottom: 1px solid #141414;
+}
+.improve .improve-text{
+    height: 450px;
+    padding-top: 100px;
+}
+.improve .improve-text:last-child{
+    margin-bottom: 100px;
+}
+.improve span{
+    display: block;
+    font-size: 20px;
+    margin-top: 50px;
+}
+.improve p{
+    font-size: 16px;
+    margin-top: 20px;
+}
+.improve-text img{
+    margin-right: 50px;
+    float: left;
+}
+.improve-text:last-child img{
+    margin-left: 50px;
+    float: right;
+}
+/* #endregion */
+/* #region */
+.team{
+    height: 1000px;
+    border-bottom: 1px solid #141414;
+}
+.team span{
+    display: block;
+    font-size: 42px;
+    text-align: center;
+    margin-top: 100px;
+}
+.team p{
+    font-size: 18px;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.team .picture{
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.picture .effect{
+    position: relative;
+    width: 470px;
+    height: 340px;
+    margin: 15px;
+    float: left;
+}
+.effect .mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    color: #fff;
+}
+.effect:hover .mask{
+    cursor: pointer;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.mask span{
+    font-size: 20px;
+}
+.mask p{
+    font-size: 12px;
+    margin-top: 10px;
+}
+.mask .mask-icons{
+    width: 180px;
+    margin: 20px auto;
+
+}
+.mask-icons .icon-border{
+    display: block;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    margin-right: 10px;
+    float: left;
+}
+/* #endregion */
+/* #region */
+.contacts{
+    width: 970px;
+    height: 680px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+.contacts .contacts-form, .contacts .contacts-text{
+    float: left;
+    width: 470px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.contacts .contacts-form{
+    border: 1px solid #141414;
+}
+.contacts-form label{
+    display: block;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.contacts-form input, .contacts-form textarea{
+    display: block;
+    width: 375px;
+    height: 50px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+.contacts-form textarea{
+    width: 375px;
+    height: 150px;
+    resize: none;
+}
+.contacts-form a{
+    display: block;
+    width: 375px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 12px;
+    margin: 0 auto;
+    color: #fff;
+    background-color: #141414;
+}
+.contacts .contacts-text{
+    padding-left: 60px;
+}
+.contacts-text span{
+    display: block;
+    font-size: 42px;
+    margin-top: 40px;
+}
+.contacts-text > p{
+    width: 70%;
+    font-size: 16px;
+    margin-top: 40px;
+}
+.information p{
+    margin-top: 20px;
+}
+.information img, .information p{
+    display: inline-block;
+}
+.information p:nth-child(2n+1){
+    display: block;
+    margin-left: 25px;
+    margin-top: 0;
+}
+/* #endregion */
+/* #region */
+.footer{
+    width: 100%;
+    height: 410px;
+    padding-top: 90px;
+    background-color: #141414;
+}
+.footer .footer-text{
+    width: 200px;
+    margin-left: 100px;
+    float: left;
+}
+.footer .footer-text:first-child{
+    margin-left: 250px;
+}
+.footer-text label{
+    color: #fff;
+    font-size: 14px;
+}
+.footer-text p{
+    color: #555;
+    font-size: 16px;
+    margin-top: 30px;
+}
+.footer-text .icon-box{
+    margin-top: 50px;
+}
+.icon-box img{
+    margin-right: 10px;
+}
+/* #endregion */
