@@ -1,0 +1,329 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+}
+.container{
+    display: flex;
+    min-width: 1920px;
+    height: 100%;
+}
+.menu{
+    flex: 0 0 350px;
+    height: 100%;
+}
+.messages{
+    flex: 0 0 calc( 100% - 350px);
+    height: 100%;
+}
+/* #region .menu */
+.menu{
+    display: flex;
+}
+/* #region icons-list */
+.menu .icons-list{
+    flex: 0 0 100px;
+    text-align: center;
+    background-color: #1d2531;
+}
+.icons-list img{
+    margin-top: 20px;
+}
+.icons-list .bottom-icons{
+    position: fixed;
+    width: 100px;
+    bottom: 20px;
+}
+.bottom-icons img:first-child{
+    margin-right: 10px;
+}
+/* #endregion */
+/* #region menu-list */
+.menu .menu-list{
+    flex: 0 0 250px;
+    background-color: #222c3c;
+}
+.menu-list .menu-list-text{
+    width: 200px;
+    padding-top: 30px;
+    border-bottom: 1px solid #5b6779;
+    margin: 0 auto;
+}
+.menu-list-text:nth-child(3){
+    border-bottom: 0 none;
+}
+.menu-list-text label{
+    display: block;
+    color: #5b6779;
+    background: url("../images/Settings.png") no-repeat right;
+}
+.menu-list-text ul{
+    list-style: none;
+    margin-top: 20px;
+}
+ul .blue-radius{
+    background: url("../images/blue-radius.png") no-repeat right;
+}
+ul .red-circle{
+    background: url("../images/red-round.png") no-repeat right;
+}
+.menu-list-text ul li{
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+}
+li a{
+    color: #b7c0cd;
+    text-decoration: none;
+}
+li span{
+    position: absolute;
+    right: 5px;;
+    color: #fff;
+}
+.server-capacity{
+    position: fixed;
+    width: 200px;
+    left: 130px;
+    bottom: 10px;
+    font-size: 14px;
+    color: #b7c0cd;
+    margin: 0 auto;
+}
+.server-capacity span:first-child{
+    margin-right: 10px;
+}
+.highlight{
+    color: #fff;
+}
+/* #endregion */
+/* #region .messages */
+.messages{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+/* #region .messages-title */
+.messages .messages-title{
+    flex: 0 0 100%;
+    height: 80px;
+    padding-left: 30px;
+    border-bottom: 1px solid #e6e9ec;
+}
+.messages-title > label{
+    display: block;
+    font-size: 24px;
+    margin-top: 25px;
+}
+.messages-title .profile{
+    position: fixed;
+    display: flex;
+    width: 220px;
+    align-items: center;
+    height: 80px;
+    top: 0;
+    right: 30px;
+}
+.profile p{
+    color: #5b6779;
+}
+.profile .profile-text{
+    flex: 1;
+    margin-left: 10px;
+}
+.profile-text label{
+    color: #2399f1;
+}
+/* #endregion */
+/* #region .messages-list */
+.messages .messages-list{
+    height: calc(100% - 80px);
+    flex: 0 0 400px;
+    border-right: 1px solid #e6e9ec;
+}
+.messages-list .search{
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    border-bottom: 1px solid #e6e9ec;
+}
+.search input{
+    width: 80%;
+    height: 40px;
+    padding-left: 10px;
+    border: 1px solid #e6e9ec;
+    border-radius: 5px;
+    background: url("../images/SearchIcon.png") no-repeat 95%;
+}
+.messages-list .messages-list-context{
+    height: 130px;
+    padding-left: 30px;
+    border-bottom: 1px solid #e6e9ec;
+}
+.messages-list-context .messages-list-context-head{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 65px;
+}
+.messages-list-context-head .head-text{
+    flex: 1;
+    margin-left: 10px;
+}
+.head-text p{
+    color: #5b5b5b;
+}
+.head-text span{
+    float: right;
+    margin-right: 5px;
+}
+.messages-list-context > p span{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 5px;
+    top: 10px;
+    color: #fff;
+    text-align: center;
+    background: url("../images/blue-round.png") no-repeat;
+}
+.messages-list-context p{
+    position: relative;
+    padding-right: 5px;
+    display: block;
+}
+.messages-list-context-border{
+    padding-left: 27px !important;
+    border-left: 3px solid #2399f1;
+}
+.messages-list-context-border .messages-list-context-head .head-text label{
+    color: #2399f1;
+}
+/* #endregion */
+/* #region .message-context */
+.messages .messages-context{
+    height: calc(100% - 80px);
+    flex: 0 0 calc(100% - 400px);
+}
+.messages-context .messages-context-title{
+    height: 70px;
+    line-height: 70px;
+    padding-left: 30px;
+    border-bottom: 1px solid #e6e9ec;
+}
+.messages-context-title label{
+    display: block;
+    width: 8rem;
+    font-size: 18px;
+    background: url("../images/Status.png") no-repeat right;
+    float: left;
+}
+.messages-context-title .toolbar{
+    position: relative;
+    top: 50%;
+    transform: translate(-30px, -50%);
+    float: right;
+}
+.toolbar .buttonbar{
+    height: 30px;
+    float: left;
+}
+.toolbar .buttonbar:first-child{
+    padding-right: 20px;
+    border-right: 1px solid #e6e9ec;
+}
+.toolbar .buttonbar a{
+    display: block;
+    width: 40px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #e6e9ec;
+    float: left;
+}
+.toolbar .buttonbar a:first-child{
+    border-radius: 5px 0 0 5px;
+}
+.toolbar .buttonbar a:last-child{
+    border-radius: 0 5px 5px 0;
+}
+.toolbar .buttonbar span{
+    display: block;
+    height: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    line-height: 30px;
+    float: left;
+}
+
+
+
+.messages-context .messages-context-text{
+    position: relative;
+    padding: 30px;
+    border-bottom: 1px solid #e6e9ec;
+}
+.messages-context-text > span{
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    color: #5b5b5b;
+    background: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    transform: translate(-50%, 0);
+}
+.messages-context-text .text-box{
+    display: flex;
+    align-items: flex-start;
+    top: 0;
+    right: 30px;
+}
+.text-box:first-child{
+    margin-bottom: 20px;
+}
+.text-box .text-box-text, .text-box .photo-box{
+    position: relative;
+    flex: 1;
+    margin-left: 10px;
+}
+.text-box-text label:nth-child(2n){
+    color: #5b6779;
+    margin-left: 10px;
+}
+.text-box .photo-box{
+    width: 156px;
+    margin-top: 10px;
+    float: left;
+}
+.messages-context-text input{
+    display: block;
+    height: 55px;
+    width: 90%;
+    text-indent: 60px;
+    margin: 0 auto;
+    background: url("../images/Addicon.png") no-repeat left;
+    border: 1px solid #e6e9ec;
+}
+.mask{
+    position: absolute;
+    top: 25px;
+    left: 53px;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    background: url("../images/Openicon.png") no-repeat ;
+}
+.photo-box:hover .mask{
+    opacity: 100;
+}
+.new-message{
+    color: #2399f1 !important;
+}
+/* #endregion */
+
+/* #endregion */
+
