@@ -1,0 +1,16 @@
+.container{
+    width: 960px;
+    margin: 2.5rem /* 40/16 */ auto;
+}
+p{
+    margin: 40px;
+}
+a{
+    display: block;
+    height: 3em;
+    line-height: 3em;
+    text-decoration: none;
+    text-align: center;
+    color: #c9c7a1;
+    background-color: #64636b;
+}

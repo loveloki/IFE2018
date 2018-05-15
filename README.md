@@ -1,6 +1,8 @@
 # [BAIDU IFE2018](http://ife.baidu.com/)相关CODE
 
 ## JavaScript
+[02](https://loveloki.github.io/IFE2018/JavaScript/02)
+
 [01](https://loveloki.github.io/IFE2018/JavaScript/01)
 
 ## HTML

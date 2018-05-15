@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Chinese multiplication table</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <script>
+        <a href="../index.html">返回首页</a>
+        var table = document.createElement("table")
+        document.body.appendChild(table)
+        var tr = ""
+        let temp = ""
+        for (let i = 1; i < 10; i++) {
+            var td = ""
+            tr += "<tr>"
+            for (let j = 1; j < 10; j++) {
+                if(i < j) continue
+                temp += i + "*" + j + "=" + (i * j) +" "
+                tt = i + "*" + j + "=" + (i * j) +" "
+                td += "<td>" + tt + "</td>"
+            }
+            temp += "\n"
+            tr += td + "</tr>"
+        }
+        console.log(temp)
+        table.innerHTML += tr
+        var k = document.querySelectorAll("td").length
+        for(let l = 0; l < k;l++){
+            document.querySelectorAll("td")[l].style.border = "1px solid #000"
+            document.querySelectorAll("td")[l].style.padding = "5px"
+        }
+    </script>
+</body>
+</html>
