@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>01</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <p><a href="../index.html">返回主页</a></p>
+    <input id="name" type="text">    
+    <button id="submit-btn">Submit</button>
+</body>
+<script>
+    var btn = document.querySelector("#submit-btn")
+    var ipt = document.querySelector("#name")
+    btn.addEventListener("click",function () {
+        console.log(ipt.value)
+    },false)
+    ipt.addEventListener("keydown",function (event) {
+        //console.log(event)
+        if (event.key == "Enter") {
+            btn.click()
+        }
+        if (event.key == "Escape") {
+            ipt.value = ""
+        }
+    },false)
+    
+    </script>
+</html>

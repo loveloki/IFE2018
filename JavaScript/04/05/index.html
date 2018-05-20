@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>05</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <style>
+        #face{
+            width: 480px;
+            height: 480px;
+        }
+    </style>
+</head>
+<body>
+    <p><a href="../index.html">返回主页</a></p>
+    <div id="face"></div>
+    <script>
+        var face = document.querySelector("#face")
+        face.style.background = "url(05.jpg) 0 0 no-repeat"
+        var y = 0
+        var flag = 0//0表示正序，1表示反序
+        function go() {
+            if (flag == 0) {
+                y -= 480
+                if (y == -480*16) {
+                    flag = 1
+                }
+            }else{
+                y += 480
+                if (y == 0) {
+                    flag = 0
+                }
+            }
+            result = "0 " + y + "px"
+            //console.log(result)
+            face.style.backgroundPosition = result
+            setTimeout(go,1000/15)
+        }
+        go()
+    </script>
+</body>
+</html>

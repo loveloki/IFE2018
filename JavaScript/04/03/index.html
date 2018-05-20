@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <style>
+        .palette {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .palette li {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>            
+    <p><a href="../index.html">返回主页</a></p>
+    <ul class="palette">
+        <li style="background-color:crimson"></li>
+        <li style="background-color:bisque"></li>
+        <li style="background-color:blueviolet"></li>
+        <li style="background-color:coral"></li>
+        <li style="background-color:chartreuse"></li>
+        <li style="background-color:darkolivegreen"></li>
+        <li style="background-color:cyan"></li>
+        <li style="background-color:#194738"></li>        
+    </ul>
+
+    <p class="color-picker"></p>
+
+    <script>
+        var u = document.querySelector("ul")
+        u.addEventListener("click",function (e) {
+            //console.log(e.target);
+            var l = e.target
+            var p = document.querySelector(".color-picker")
+            var c = l.style.backgroundColor
+            p.innerHTML = c
+            p.style.color = c
+        }, false)
+    </script>
+</body>
+</html>

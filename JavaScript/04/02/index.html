@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <style>
+        select {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <p><a href="../index.html">返回主页</a></p>       
+    <label>
+        <input id="school" name="status" type="radio">
+        School
+    </label>
+    <label>
+        <input id="company" name="status" type="radio">
+        Company
+    </label>
+
+    <select id="school-select">        
+        <option>北京邮电大学</option>
+        <option>黑龙江大学</option>
+        <option>华中科技大学</option>
+    </select>
+
+    <select id="company-select">        
+        <option>百度</option>
+        <option>爱奇艺</option>        
+    </select>
+    <script>
+        var sch = document.querySelector("#school")
+        var com = document.querySelector("#company")
+        var schSelect = document.querySelector("#school-select")
+        var comSelect = document.querySelector("#company-select")
+        sch.addEventListener("focus", function () {
+            schSelect.style.display = "block"
+            comSelect.style.display = "none"
+        }, false)
+        com.addEventListener("focus", function () {
+            schSelect.style.display = "none"
+            comSelect.style.display = "block"
+        }, false)
+        
+        
+        
+    </script>
+</body>
+</html>
