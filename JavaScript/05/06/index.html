@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数组实现队列2</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <p><a href="../index.html">返回主页</a></p>
+    <input id="queue-input" type="text">
+    <p id="queue-cont">队列内容：apple-&gt;pear</p>    
+    <button id="in-btn">入队</button>
+    <button id="out-btn">出队</button>
+    <button id="font-btn">打印队头元素内容</button>
+    <button id="empty-btn">判断队列是否为空</button>
+
+    <script>
+        var queue = ["apple", "pear"]
+        function InQueue(queue, temp) {
+            if(queue && temp != ""){
+                queue.push(temp)
+            }else{
+                console.log("队列不存在或输入为空")
+            }
+        }
+        function outQueue(queue) {
+            if (queue && !emptyQueue(queue)) {
+                queue.shift()
+            }else{
+                console.log("队列不存在或为空")
+            }
+        }
+        function frontQueue(queue) {
+            if (queue && !emptyQueue(queue)) {
+                return queue[0]
+            }else{
+                return "队列不存在或为空"
+            }
+        }
+        function emptyQueue(queue) {
+            if (queue) {
+                if (queue.length == 0) {
+                    return true
+                }else{
+                    return false
+                }
+            }else{
+                return "队列不存在"
+            }
+        }
+        function display(queue) {
+            return "队列内容：" + queue.join("<-")
+        }
+
+        var btn = document.querySelectorAll("button")
+        var qP = document.querySelector("#queue-cont")
+        btn[0].addEventListener("click",function () {
+            var qInput = document.querySelector("#queue-input")
+            InQueue(queue, qInput.value)
+            qP.innerHTML = display(queue)
+        },false)
+        btn[1].addEventListener("click",function () {
+            outQueue(queue)
+            qP.innerHTML = display(queue)
+        },false)
+        btn[2].addEventListener("click",function () {
+            console.log(frontQueue(queue))
+        },false)
+        btn[3].addEventListener("click",function () {
+            console.log(emptyQueue(queue))
+        },false)
+
+    </script>
+</body>
+</html>

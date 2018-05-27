@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>排序</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <p><a href="../index.html">返回主页</a></p>
+    <script>
+        var arr = [43, 54, 4, -4, 84, 100, 58, 27, 140]
+        function aBigThanB(a, b) {
+            return b - a
+        }
+        function bBigThana(a, b) {
+            return a - b
+        }
+        console.log(arr.sort(aBigThanB))
+        console.log(arr.sort(bBigThana))        
+        var arr = ['apple', 'dog', 'cat', 'car', 'zoo', 'orange', 'airplane']
+        function reverse(a, b) {
+            return b.localeCompare(a)
+        }
+        console.log(arr.sort())
+        console.log(arr.sort(reverse))
+        var arr = [[10, 14], [16, 60], [7, 44], [26, 35], [22, 63]];
+        function twoDArray(a, b) {
+            return b[1] - a[1]
+        }
+        console.log(arr.sort(twoDArray))
+        var arr = [
+            {
+                id: 1,
+                name: 'candy',
+                value: 40
+            }, {
+                id: 2,
+                name: 'Simon',
+                value: 50
+            }, {
+                id: 3,
+                name: 'Tony',
+                value: 45
+            }, {
+                id: 4,
+                name: 'Annie',
+                value: 60
+            }
+        ]
+        function oArray(a, b) {
+            return b.value - a.value
+        }
+        console.log(arr.sort(oArray))
+        
+        
+        
+    </script>
+</body>
+</html>

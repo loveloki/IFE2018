@@ -1,0 +1,12 @@
+p{
+    margin: 40px;
+}
+p > a{
+    display: block;
+    height: 3em;
+    line-height: 3em;
+    text-decoration: none;
+    text-align: center;
+    color: #c9c7a1;
+    background-color: #64636b;
+}

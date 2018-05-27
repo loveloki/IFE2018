@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>栈</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <p><a href="../index.html">返回主页</a></p>
+    <input id="stack-input" type="text">
+    <p id="stack-cont">栈内容：applelt->pear</p>    
+    <button id="push-btn">进栈</button>
+    <button id="pop-btn">退栈</button>
+    <button id="font-btn">打印栈顶元素内容</button>
+    <button id="empty-btn">判断栈是否为空</button>
+
+    <script>
+        var stack = ["apple", "pear"]
+        function pushStack(stack, temp) {
+            if(stack && temp != ""){
+                stack.push(temp)
+            }else{
+                console.log("栈不存在或输入为空")
+            }
+        }
+        function popStack(stack) {
+            if (stack && !emptyStack(stack)) {
+                stack.pop()
+            }else{
+                console.log("栈不存在或为空")
+            }
+        }
+        function frontStack(stack) {
+            if (stack && !emptyStack(stack)) {
+                return stack[stack.length - 1]
+            }else{
+                return "栈不存在或为空"
+            }
+        }
+        function emptyStack(stack) {
+            if (stack) {
+                if (stack.length == 0) {
+                    return true
+                }else{
+                    return false
+                }
+            }else{
+                return "栈不存在"
+            }
+        }
+        function display(stack) {
+            return "队列内容：" + stack.join("->")
+        }
+
+        var btn = document.querySelectorAll("button")
+        var sP = document.querySelector("#stack-cont")
+        btn[0].addEventListener("click",function () {
+            var sInput = document.querySelector("#stack-input")
+            pushStack(stack, sInput.value)
+            sP.innerHTML = display(stack)
+        },false)
+        btn[1].addEventListener("click",function () {
+            popStack(stack)
+            sP.innerHTML = display(stack)
+        },false)
+        btn[2].addEventListener("click",function () {
+            console.log(frontStack(stack))
+        },false)
+        btn[3].addEventListener("click",function () {
+            console.log(emptyStack(stack))
+        },false)
+
+    </script>
+</body>
+</html>

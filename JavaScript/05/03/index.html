@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>字符串2</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <p>
+        <a href="../index.html">返回主页</a>
+        <button id = "trim">测试diyTrim</button>
+        <button id = "remove">测试removeRepetition</button>
+    </p>
+    <script>
+        /*
+        实现一个字符串头尾去除空格的函数
+        注意需要去除的空格，包括全角、半角空格
+        暂时不需要学习和使用正则表达式的方式
+        */
+        function diyTrim(str) {
+            var result = ""
+            var flag = str.length
+            while (flag--) {
+                if (str.indexOf(" ") == 0 || str.indexOf("　") == 0) {
+                    str = str.slice(1, str.length)
+                }else if(str.lastIndexOf(" ") == str.length -1 || str.lastIndexOf("　") == str.length -1 ){
+                    str = str.slice(0, str.length -1)
+                }else{
+                    result = str
+                }
+            }
+            // do something
+
+            return result
+        }
+        var trim = document.querySelector("#trim")
+        var remo = document.querySelector("#remove")
+        trim.addEventListener("click", function () {
+            // 测试用例
+            console.log(diyTrim(' a f b    ')); // ->a f b
+            console.log(diyTrim('    ffdaf    ')); // ->ffdaf
+            console.log(diyTrim('1    ')); // ->1
+            console.log(diyTrim('　　f')); // ->f
+            console.log(diyTrim('  　  a f b 　　 ')); // ->a f b
+            console.log(diyTrim(' ')); // ->
+            console.log(diyTrim('　')); // ->
+            console.log(diyTrim('')); // ->
+        },false)
+        remo.addEventListener("click", function () {
+            // 测试用例
+            console.log(removeRepetition("aaa")); // ->a
+            console.log(removeRepetition("abbba")); // ->aba
+            console.log(removeRepetition("aabbaabb")); // ->abab
+            console.log(removeRepetition("")); // ->
+            console.log(removeRepetition("abc")); // ->abc
+        },false)
+
+        
+        /*
+        去掉字符串str中，连续重复的地方
+        */
+        function removeRepetition(str) {
+            var result = "";
+            // do something
+            var str = str.split("")
+            var arr = []
+            var temp = ""
+            for (let i = 0; i < str.length; i++) {
+                if (str[i] != temp) {
+                    arr.push(str[i])
+                    temp = str[i]
+                }
+            }
+            result = arr.toString()
+            return result;
+        }
+
+        
+    </script>
+</body>
+
+</html>

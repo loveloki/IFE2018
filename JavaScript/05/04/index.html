@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>对象</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <p><a href="../index.html">返回主页</a></p>
+    <script>
+        var tree = {
+            "id": 0,
+            "name": "root",
+            "left": {
+                "id": 1,
+                "name": "Simon",
+                "left": {
+                    "id": 3,
+                    "name": "Carl",
+                    "left": {
+                        "id": 7,
+                        "name": "Lee",
+                        "left": {
+                            "id": 11,
+                            "name": "Fate"
+                        }
+                    },
+                    "right": {
+                        "id": 8,
+                        "name": "Annie",
+                        "left": {
+                            "id": 12,
+                            "name": "Saber"
+                        }
+                    }
+                },
+                "right": {
+                    "id": 4,
+                    "name": "Tony",
+                    "left": {
+                        "id": 9,
+                        "name": "Candy"
+                    }
+                }
+            },
+            "right": {
+                "id": 2,
+                "name": "right",
+                "left": {
+                    "id": 5,
+                    "name": "Carl",
+                },
+                "right": {
+                    "id": 6,
+                    "name": "Carl",
+                    "right": {
+                        "id": 10,
+                        "name": "Kai"
+                    }        
+                }
+            }
+        }
+
+        // 假设id和name均不会重复，根据输入name找到对应的id
+        function findIdByName(name) {
+            var temp = tree            
+            function findId(temp) {
+                if(temp){
+                    if(temp.name == name){
+                        console.log(name + "的id是" + temp.id)
+                    }
+                    findId(temp.left)
+                    findId(temp.right)
+                }
+            }
+            findId(temp)
+        }
+        findIdByName("Candy")
+        
+
+        // 假设id和name均不会重复，根据输入id找到对应的name
+        function findNameById(id) {
+            var temp = tree            
+            function findName(temp) {
+                if(temp){
+                    if(temp.id == id){
+                        console.log(id + "的name是" + temp.name)
+                    }
+                    findName(temp.left)
+                    findName(temp.right)
+                }
+            }
+            findName(temp)
+        }
+        findNameById(9)
+
+        // 把这个对象中所有的名字以“前序遍历”的方式全部输出到console中
+        function getListWithDLR() {
+            console.log("先序遍历：");
+            function PreOrder(tree) {
+                if(tree){
+                    console.log(tree.id + "的name是" + tree.name)
+                    PreOrder(tree.left)
+                    PreOrder(tree.right)
+                }
+            }
+            PreOrder(tree)
+        }
+        getListWithDLR()
+
+        // 把这个对象中所有的名字以“中序遍历”的方式全部输出到console中
+        function getListWithLDR() {
+            console.log("中序遍历：");
+            function MiddleOrder(tree) {
+                if(tree){
+                    MiddleOrder(tree.left)
+                    console.log(tree.id + "的name是" + tree.name)
+                    MiddleOrder(tree.right)
+                }
+            }
+            MiddleOrder(tree)
+        }
+        getListWithLDR()
+
+        // 把这个对象中所有的名字以“后序遍历”的方式全部输出到console中
+        function getListWithLRD() {
+            console.log("后序遍历：");
+            function PostOrder(tree) {
+                if(tree){
+                    PostOrder(tree.left)
+                    console.log(tree.id + "的name是" + tree.name)
+                    PostOrder(tree.right)
+                }
+            }
+            PostOrder(tree)
+        }
+        getListWithLRD()
+    </script>
+</body>
+</html>
