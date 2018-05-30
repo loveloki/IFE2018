@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>倒数开始 滴答滴 滴答滴</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <script>
+        <p><a href="index2.html">时间差</a></p>
+        <p id="time-CN"></p>
+        <p id="time-EN"></p>
+        
+        <script>
         function Go() {
             console.log("Go");
         }
@@ -28,6 +33,113 @@
             }
         }
 
+        function displayTime() {
+           var pCn = document.querySelector("#time-CN")
+           var pEn = document.querySelector("#time-EN")
+           function time() {
+                pCn.innerHTML = GetTime("CN")
+                pEn.innerHTML = GetTime()               
+               setTimeout(time,1000)
+           }
+           time()
+            
+        }
+        function GetTime(language) {
+            var D = new Date(),
+                year = D.getFullYear(),
+                month = D.getMonth(),
+                day = D.getDate(),
+                week = D.getDay(),
+                hour = D.getHours(),
+                min = D.getMinutes(),
+                sec = D.getSeconds()
+            month = add0(month)
+            day = add0(day)
+            hour = add0(hour)
+            min = add0(min)
+            sec = add0(sec)
+            week = week2Language(week, language)
+            var time = outTime(language, year, month, day, week, hour, min, sec)
+            return time
+        }
+        function week2Language(week, language) {
+            switch (week) {
+                case 0:
+                    if(language == "CN"){
+                        week = "星期日"
+                    }else{
+                        week = "Sunday"
+                    }
+                    break
+                case 1:
+                if(language == "CN"){
+                        week = "星期一"
+                    }else{
+                        week = "Monday"
+                    }
+                    break
+                case 2:
+                if(language == "CN"){
+                        week = "星期二"
+                    }else{
+                        week = "Tuesday"
+                    }
+                    break
+                case 3:
+                if(language == "CN"){
+                        week = "星期三"
+                    }else{
+                        week = "Wednesday"
+                    }
+                    break
+                case 4:
+                if(language == "CN"){
+                        week = "星期四"
+                    }else{
+                        week = "Thursday"
+                    }
+                    break
+                case 5:
+                if(language == "CN"){
+                        week = "星期五"
+                    }else{
+                        week = "Friday"
+                    }
+                    break
+                case 6:
+                if(language == "CN"){
+                        week = "星期六"
+                    }else{
+                        week = "Saturday"
+                    }
+                    break
+                default:
+                    break
+            }
+            return week
+        }
+        function outTime(language, year, month, day, week, hour, min, sec) {
+            var date = year + "年" + month + "月" + day + "日"
+            if (language == "CN") {
+                var now = hour + ":" + min + ":" + sec                
+            }else{
+                var period = "AM"
+                if (hour > 12) {
+                    period = "PM"
+                    hour -= 12
+                }
+                var now = hour + ":" + min + ":" + sec + period
+            }
+            var time = date + week + now
+            return time
+        }
+        function add0(temp) {
+            if (temp < 10) {
+                temp = "0" + temp
+            }
+            return temp
+        }
+        displayTime()
         
     </script>
 </body>
