@@ -1,0 +1,21 @@
+#email-input, #email-sug-wrapper{
+    box-sizing: border-box;
+}
+#email-input{
+    width: 200px;
+}
+#email-sug-wrapper{
+    width: 200px;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #000;
+    border-top: none;
+    display: none;
+}
+#email-sug-wrapper li:hover{
+    background-color: #f00;
+    cursor: pointer;
+}
+.li-on{
+    background-color: #f00;
+}

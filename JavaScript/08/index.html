@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我是精明的小买家1</title>
+    <style>
+        table{
+            border: 2px solid #000;
+            border-collapse: collapse;
+        }
+        table thead{
+            background:#8e44ad;
+            color: #fff;
+        }
+        table th{
+            border: 1px solid #000;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="region-select">
+        <input type="checkbox" name="华东" id="华东" checked="checked">
+        <label for="华东">华东</label>
+        <input type="checkbox" name="华南" id="华南">
+        <label for="华南">华南</label>
+        <input type="checkbox" name="华北" id="华北">
+        <label for="华北">华北</label>
+        <input type="checkbox" name="全选" id="全选-reg">
+        <label for="全选-reg">全选</label>
+    </div>
+    <div id="types-select">
+        <input type="checkbox" name="手机" id="手机" checked="checked">
+        <label for="手机">手机</label>
+        <input type="checkbox" name="笔记本" id="笔记本">
+        <label for="笔记本">笔记本</label>
+        <input type="checkbox" name="智能音箱" id="智能音箱">
+        <label for="智能音箱">智能音箱</label>
+        <input type="checkbox" name="全选" id="全选-types">
+        <label for="全选-types">全选</label>
+    </div>
+    <div id="table-wrapper"></div>
+    <script src="js/ife31data.js"></script>
+    <script src="js/checkbox.js"></script>
+    <script src="js/table.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
