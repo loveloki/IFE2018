@@ -1,0 +1,62 @@
+*{
+    box-sizing: border-box;
+}
+table{
+    border: 2px solid #000;
+    border-collapse: collapse;
+}
+table thead{
+    background:#8e44ad;
+    color: #fff;
+}
+table th, table td{
+    text-align: center;
+    width: 5em;
+    border: 1px solid #000;
+}
+svg, canvas{
+    margin-top:20px;
+    margin-left: 10px;
+}
+#table-picture{
+    padding-top: 20px;
+}
+#histogram, #line{
+    width: calc(50% - 5px);
+    float: left;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+#line{
+    margin-left: 10px;
+}
+#region-select, #types-select{
+    width: fit-content;
+    margin: 0 auto;
+}
+#table-wrapper{
+    width: fit-content;
+    margin: 0 auto;
+}
+
+
+#number, #enter, #cancel{
+    width: 25px;
+    height: 25px;
+    float: left;
+}
+#number{
+    width: 50px;
+    border: none;
+}
+#enter{
+    background: url(../image/enter.png) no-repeat center;
+}
+#cancel{
+    background: url(../image/cancel.png) no-repeat center;
+}
+.onEdit{
+    width: 100px;
+    height: 25px;
+    background-color: #fff;
+}
